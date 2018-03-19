@@ -1,7 +1,7 @@
 
 {% set name = "xbpch" %}
-{% set version = "0.3.2" %}
-{% set sha256 = "58e943de3423b0d105c0c392315ad1596f91c9601535ac5d118ffb1147387efe" %}
+{% set version = "0.3.3" %}
+{% set sha256 = "cfb4df928792614cf067256161543dfbfb19013b8f140eb4ba3a90fd5fed575e" %}
 
 package:
   name: {{ name|lower }}
