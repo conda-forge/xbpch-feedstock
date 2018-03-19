@@ -11,16 +11,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
+  skip: True  # [py2k]
   number: 0
+  noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
-    - python >=3
+    - python
     - pip
   run:
-    - python >=3
+    - python
     - dask
     - future
     - xarray
