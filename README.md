@@ -18,9 +18,7 @@ without having to pre-process using GAMAP, IDL, or Matlab.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/xbpch-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xbpch-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/xbpch-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/xbpch-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/xbpch-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/xbpch-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/xbpch-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/xbpch-feedstock)
 
 Current release info
 ====================
