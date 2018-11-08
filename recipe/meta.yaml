@@ -1,26 +1,24 @@
-{% set name = "xbpch" %}
 {% set version = "0.3.3" %}
-{% set sha256 = "cfb4df928792614cf067256161543dfbfb19013b8f140eb4ba3a90fd5fed575e" %}
 
 package:
-  name: {{ name|lower }}
+  name: xbpch
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/x/xbpch/xbpch-{{ version }}.tar.gz
+  sha256: cfb4df928792614cf067256161543dfbfb19013b8f140eb4ba3a90fd5fed575e
 
 build:
-  skip: True  # [py2k]
+  noarch: python
   number: 1000
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
     - dask
     - future
     - xarray
