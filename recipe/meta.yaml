@@ -1,4 +1,4 @@
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 
 package:
   name: xbpch
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xbpch/xbpch-{{ version }}.tar.gz
-  sha256: c9bfd5f0ee015d1f4e668b87f8fa4bfb0c226fa2f5a2a8c4bf05b14ca1a939b5
+  sha256: 122b2089b5130917b6b1d828ff66d0f4047778c241073da5e2804aafa1bfb8a4
 
 build:
   noarch: python
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
