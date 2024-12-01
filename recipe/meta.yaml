@@ -5,25 +5,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/x/xbpch/xbpch-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/x/xbpch/xbpch-{{ version }}.tar.gz
   sha256: 122b2089b5130917b6b1d828ff66d0f4047778c241073da5e2804aafa1bfb8a4
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - dask
     - future
     - xarray
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - xbpch
 
